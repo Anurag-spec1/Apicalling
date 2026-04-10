@@ -54,3 +54,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
 
 }
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
